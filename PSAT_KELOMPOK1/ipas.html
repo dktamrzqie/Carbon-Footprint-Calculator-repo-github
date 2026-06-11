@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisis Emisi Karbon dan Lingkungan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg.jpeg');
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0b6e4f;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin: 0 0 20px 0;
+            color: #0b6e4f;
+            border-left: 5px solid #0b6e4f;
+            padding-left: 10px;
+        }
+
+        h3 {
+            margin: 20px 0 10px;
+            color: #333;
+        }
+
+        /* Gaya komponen Card */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 35px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #0b6e4f;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nama {
+            background: #dff4ea;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .total {
+            background: #fff3cd;
+            font-weight: bold;
+        }
+
+        .box {
+            background: #e9ecef;
+            padding: 15px;
+            border-left: 5px solid #0b6e4f;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            margin: 20px auto 0 auto;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>ANALISIS EMISI KARBON DAN LINGKUNGAN</h1>
+
+    <div class="card">
+        <h2>Konsumsi Energi Listrik Rumah Tangga</h2>
+
+        <table>
+            <tr class="nama">
+                <td colspan="6">Destya Inayah</td>
+            </tr>
+            <tr>
+                <th>No</th>
+                <th>Perangkat</th>
+                <th>Daya (Watt)</th>
+                <th>Jumlah</th>
+                <th>Lama Penggunaan (Jam/Hari)</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Lampu LED</td>
+                <td>10</td>
+                <td>7</td>
+                <td>8</td>
+                <td>560</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Televisi</td>
+                <td>80</td>
+                <td>1</td>
+                <td>3</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kipas Angin</td>
+                <td>45</td>
+                <td>2</td>
+                <td>10</td>
+                <td>900</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Kulkas</td>
+                <td>150</td>
+                <td>1</td>
+                <td>24</td>
+                <td>3600</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Rice Cooker</td>
+                <td>300</td>
+                <td>1</td>
+                <td>6</td>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Setrika</td>
+                <td>350</td>
+                <td>1</td>
+                <td>1</td>
+                <td>350</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Konsumsi Energi</td>
+                <td>7450</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Emisi Karbon (kWh)</td>
+                <td>7,45</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr class="nama">
+                <td colspan="6">M. Fauzul Adhim</td>
+            </tr>
+            <tr>
+                <th>No</th>
+                <th>Perangkat</th>
+                <th>Daya</th>
+                <th>Jumlah</th>
+                <th>Lama Penggunaan</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Lampu LED</td>
+                <td>10</td>
+                <td>10</td>
+                <td>8</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Televisi</td>
+                <td>80</td>
+                <td>1</td>
+                <td>3</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kipas Angin</td>
+                <td>45</td>
+                <td>4</td>
+                <td>10</td>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Kulkas</td>
+                <td>150</td>
+                <td>1</td>
+                <td>24</td>
+                <td>3600</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Rice Cooker</td>
+                <td>300</td>
+                <td>1</td>
+                <td>6</td>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Mesin Cuci</td>
+                <td>180</td>
+                <td>1</td>
+                <td>2</td>
+                <td>360</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Konsumsi Energi</td>
+                <td>8600</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Emisi Karbon (kWh)</td>
+                <td>8,6</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr class="nama">
+                <td colspan="6">Santya Satya Kinanti</td>
+            </tr>
+            <tr>
+                <th>No</th>
+                <th>Perangkat</th>
+                <th>Daya</th>
+                <th>Jumlah</th>
+                <th>Lama Penggunaan</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Lampu LED</td>
+                <td>10</td>
+                <td>19</td>
+                <td>8</td>
+                <td>1520</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Televisi</td>
+                <td>80</td>
+                <td>1</td>
+                <td>3</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kipas Angin</td>
+                <td>45</td>
+                <td>3</td>
+                <td>8</td>
+                <td>1080</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Kulkas</td>
+                <td>150</td>
+                <td>1</td>
+                <td>24</td>
+                <td>3600</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Rice Cooker</td>
+                <td>300</td>
+                <td>1</td>
+                <td>6</td>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Setrika</td>
+                <td>350</td>
+                <td>1</td>
+                <td>1</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Mesin Cuci</td>
+                <td>180</td>
+                <td>1</td>
+                <td>2</td>
+                <td>360</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Blender</td>
+                <td>200</td>
+                <td>1</td>
+                <td>1</td>
+                <td>200</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Konsumsi Energi</td>
+                <td>9150</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Emisi Karbon (kWh)</td>
+                <td>9,15</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr class="nama">
+                <td colspan="6">Dikta Marzuqie</td>
+            </tr>
+            <tr>
+                <th>No</th>
+                <th>Perangkat</th>
+                <th>Daya</th>
+                <th>Jumlah</th>
+                <th>Lama Penggunaan</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Lampu LED</td>
+                <td>10</td>
+                <td>11</td>
+                <td>8</td>
+                <td>880</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Televisi</td>
+                <td>80</td>
+                <td>1</td>
+                <td>3</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kipas Angin</td>
+                <td>45</td>
+                <td>3</td>
+                <td>10</td>
+                <td>1350</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Kulkas</td>
+                <td>150</td>
+                <td>1</td>
+                <td>24</td>
+                <td>3600</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Rice Cooker</td>
+                <td>300</td>
+                <td>1</td>
+                <td>6</td>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Setrika</td>
+                <td>350</td>
+                <td>1</td>
+                <td>1</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Mesin Cuci</td>
+                <td>180</td>
+                <td>1</td>
+                <td>2</td>
+                <td>360</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Konsumsi Energi</td>
+                <td>8580</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Emisi Karbon (kWh)</td>
+                <td>8,85</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr class="nama">
+                <td colspan="6">Kayla Marsya'atur R.</td>
+            </tr>
+            <tr>
+                <th>No</th>
+                <th>Perangkat</th>
+                <th>Daya (Watt)</th>
+                <th>Jumlah</th>
+                <th>Lama Penggunaan</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Lampu LED</td>
+                <td>10</td>
+                <td>11</td>
+                <td>13</td>
+                <td>1430</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Televisi</td>
+                <td>80</td>
+                <td>1</td>
+                <td>2</td>
+                <td>160</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kipas Angin</td>
+                <td>45</td>
+                <td>2</td>
+                <td>8</td>
+                <td>720</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Kulkas</td>
+                <td>150</td>
+                <td>1</td>
+                <td>24</td>
+                <td>3600</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Rice Cooker</td>
+                <td>300</td>
+                <td>1</td>
+                <td>6</td>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Setrika</td>
+                <td>350</td>
+                <td>1</td>
+                <td>1</td>
+                <td>350</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Dispenser</td>
+                <td>150</td>
+                <td>1</td>
+                <td>24</td>
+                <td>3600</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Konsumsi Energi</td>
+                <td>11.660</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Emisi Karbon (kWh)</td>
+                <td>11,66</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr class="nama">
+                <td colspan="6">Jovita Fuji Juliani</td>
+            </tr>
+            <tr>
+                <th>No</th>
+                <th>Perangkat</th>
+                <th>Daya (Watt)</th>
+                <th>Jumlah</th>
+                <th>Lama Penggunaan</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Lampu LED</td>
+                <td>10</td>
+                <td>10</td>
+                <td>9</td>
+                <td>900</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Televisi</td>
+                <td>80</td>
+                <td>1</td>
+                <td>3</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Kipas Angin</td>
+                <td>45</td>
+                <td>5</td>
+                <td>9</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Kulkas</td>
+                <td>150</td>
+                <td>1</td>
+                <td>24</td>
+                <td>3600</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Rice Cooker</td>
+                <td>300</td>
+                <td>1</td>
+                <td>6</td>
+                <td>1800</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Hair Dryer</td>
+                <td>150</td>
+                <td>1</td>
+                <td>0.5</td>
+                <td>75</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Konsumsi Energi</td>
+                <td>8640</td>
+            </tr>
+            <tr class="total">
+                <td colspan="5">Total Emisi Karbon (kWh)</td>
+                <td>8,64</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <div class="box">
+            Faktor emisi listrik = <b>0,85 kg CO₂/kWh</b>
+        </div>
+
+        <h3>Perhitungan Emisi Harian</h3>
+        <ul>
+            <li>Destya Inayah: 7,45 * 0,85 = 6,332 kg CO₂/hari</li>
+            <li>M. Fauzul Adhim: 8,6 * 0,85 = 7,310 kg CO₂/hari</li>
+            <li>Santya Satya Kinanti: 9,15 * 0,85 = 7,777 kg CO₂/hari</li>
+            <li>Dikta Marzuqie: 8,58 * 0,85 = 7,293 kg CO₂/hari</li>
+            <li>Kayla Mrsya'atur R.: 11,66 * 0,85 = 9,911 kg CO₂/hari</li>
+            <li>Jovita Fuji J.: 8,64 * 0,85 = 7,344 kg CO₂/hari</li>
+        </ul>
+
+        <h3>Perhitungan Emisi Bulanan</h3>
+        <ul>
+            <li>Destya Inayah: 6,332 * 30 = 189,96 kg CO₂/bulan</li>
+            <li>M. Fauzul Adhim: 7,310 * 30 = 219,3 kg CO₂/bulan</li>
+            <li>Santya Satya Kinanti: 7,777 * 30 = 233,31 kg CO₂/bulan</li>
+            <li>Dikta Marzuqie: 7,293 * 30 = 218,79 kg CO₂/bulan</li>
+            <li>Kayla Mrsya'atur R.: 9,911 * 30 = 297,33 kg CO₂/bulan</li>
+            <li>Jovita Fuji J.: 7,344 * 30 = 220,32 kg CO₂/bulan</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="card">
+        <h2>Emisi Karbon Kendaraan Bermotor</h2>
+
+        <h3>Faktor Emisi BBM</h3>
+        <table>
+            <tr>
+                <th>Nama</th>
+                <th>Jenis Kendaraan</th>
+                <th>Jumlah</th>
+                <th>Jenis BBM</th>
+                <th>Konsumsi (Liter/Bulan)</th>
+                <th>Faktor Emisi</th>
+            </tr>
+            <tr>
+                <td>Destya Inayah</td>
+                <td>Motor</td>
+                <td>2</td>
+                <td>Pertamax</td>
+                <td>32</td>
+                <td>2.31</td>
+            </tr>
+            <tr>
+                <td>M. Fauzul Adhim</td>
+                <td>Motor</td>
+                <td>4</td>
+                <td>Pertamax</td>
+                <td>80</td>
+                <td>2.31</td>
+            </tr>
+            <tr>
+                <td>Santya Satya Kinanti</td>
+                <td>Motor</td>
+                <td>3</td>
+                <td>Pertamax</td>
+                <td>32</td>
+                <td>2.31</td>
+            </tr>
+            <tr>
+                <td>Dikta Marzuqie</td>
+                <td>Motor</td>
+                <td>2</td>
+                <td>Pertamax</td>
+                <td>40</td>
+                <td>2.31</td>
+            </tr>
+            <tr>
+                <td>Kayla Marsya'atur R.</td>
+                <td>Motor</td>
+                <td>1</td>
+                <td>Pertalite</td>
+                <td>25</td>
+                <td>2.31</td>
+            </tr>
+            <tr>
+                <td>Jovita Fuji Juliani</td>
+                <td>Motor</td>
+                <td>3</td>
+                <td>Pertalite</td>
+                <td>72</td>
+                <td>2.31</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>Perhitungan Emisi BBM Bulanan</h3>
+        
+        <h3>Rumus Dasar</h3>
+        <div class="box">
+            Emisi CO₂ (kg) = Konsumsi BBM (Liter) * Faktor Emisi (kg CO₂/Liter)
+        </div>
+
+        <ul>
+            <li>Destya Inayah: 32 * 2,31 = 73,92 kg CO₂/bulan</li>
+            <li>M. Fauzul Adhim: 80 * 2,31 = 184,8 kg CO₂/bulan</li>
+            <li>Santya Satya Kinanti: 32 * 2,31 = 73,92 kg CO₂/bulan</li>
+            <li>Dikta Marzuqie: 40 * 2,31 = 92,4 kg CO₂/bulan</li>
+            <li>Kayla Mrsya'atur R.: 25 * 2,31 = 57,75 kg CO₂/bulan</li>
+            <li>Jovita Fuji J.: 72 * 2,31 = 166,32 kg CO₂/bulan</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="card">
+        <h2>Menganalisa Keterkaitan Peningkatan Jumlah Emisi CO₂ Dengan Peningkatan Suhu Bumi</h2>
+        <p>Keterkaitan antara kenaikan emisi karbon dioksida CO₂ dan kenaikan suhu bumi 
+        merupakan hubungan sebab-akibat yang didasarkan pada prinsip Efek Rumah Kaca. 
+        Secara alami, atmosfer bumi membutuhkan gas rumah kaca untuk menjaga suhu tetap hangat. 
+        Namun, aktivitas manusia seperti penggunaan listrik rumah tangga yang bersumber dari 
+        pembangkit listrik berbahan bakar fosil serta penggunaan bahan bakar minyak (BBM) pada kendaraan,
+        secara masif melepaskan miliaran ton emisi CO₂ tambahan ke atmosfer bumi.</p>
+    </div>
+
+    <hr>
+
+    <div class="card">
+        <h2>Grafik Peningkatan Emisi CO₂ Global</h2>
+        <img src="grafik.jpeg" alt="Grafik Peningkatan Emisi CO₂ Global">
+    </div>
+
+    <div class="card">
+        <h2>Grafik Anomali Suhu Bumi Global Berbanding Era Pra-Industri (2016-2025)</h2>
+        <img src="chart.jpeg" alt="Grafik Anomali Suhu Bumi Global Berbanding Era Pra-Industri">
+    </div>
+
+    <hr>
+
+    <div class="card">
+        <h2>3 Aksi Nyata Untuk Mengurangi Emisi</h2>
+        <ul>
+            <li>Hemat Energi Listrik Rumah Tangga</li>
+            <li>Gunakan Transportasi Ramah Lingkungan</li>
+            <li>Kelola Sampah dengan Baik</li>
+        </ul>
+    </div>
+
+    <hr>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembar Cakar & Validasi Hitung</title>    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: url(background.jpg.jpeg);
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* --- Header Section Info --- */
+        .header-info {
+            background: linear-gradient(135deg, #dec44f, #fbf97d);
+            color: #333;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-info h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .header-info p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        /* --- Card Wadah Utama Kalkulator --- */
+        .card-kalkulator {
+            background-color: #ffffff;
+            width: 100%;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 8px solid #1e5631; 
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+        .card-kalkulator h2 {
+            color: #1e5631; 
+            text-align: center;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .card-kalkulator .deskripsi {
+            text-align: center;
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .card-kalkulator .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .card-kalkulator .input-group label {
+            display: block;
+            font-weight: 600;
+            color: #3e4e41;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .card-kalkulator .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .card-kalkulator .input-group input:focus {
+            border-color: #1e5631;
+            outline: none;
+        }
+
+        .card-kalkulator button {
+            width: 100%;
+            background-color: #1e5631;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .card-kalkulator button:hover {
+            background-color: #143d22;
+        }
+
+        /* --- Area Kotak Hasil --- */
+        .card-kalkulator .hasil-box {
+            margin-top: 30px;
+            padding: 25px;
+            background-color: #f0f7f1;
+            border-left: 5px solid #1e5631;
+            border-radius: 4px;
+            display: none; 
+            text-align: left;
+        }
+
+        .card-kalkulator .hasil-box h3 {
+            margin: 0 0 15px 0;
+            color: #1e5631;
+            font-size: 1.2rem;
+        }
+
+        /* --- Tabel Responsif --- */
+        .card-kalkulator .table-responsive {
+            width: 100%;
+            overflow-x: auto; 
+            margin-bottom: 20px;
+        }
+
+        .card-kalkulator table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            min-width: 450px; 
+        }
+
+        .card-kalkulator table, th, td {
+            border: 1px solid #dcdcdc;
+        }
+
+        .card-kalkulator th, td {
+            padding: 12px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .card-kalkulator th {
+            background-color: #1e5631;
+            color: white;
+            font-weight: 600;
+        }
+
+        .card-kalkulator .total-row {
+            font-weight: bold;
+            background-color: #eaedd2;
+        }
+
+        .card-kalkulator .total-nilai {
+            color: #d9534f;
+            font-size: 1.1rem;
+        }
+
+        .card-kalkulator .saran {
+            font-size: 0.95rem;
+            color: #3e4e41;
+            line-height: 1.6;
+            border-top: 1px dashed #ccc;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        /* --- Banner Validasi Akhir --- */
+        .validation-banner {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .validation-banner h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.6rem;
+        }
+
+        .validation-banner p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <section id="cakar">
+            <div class="header-info">
+                <h2>📋 Lembar Cakar & Validasi Hitung</h2>
+                <p>Lembar cakar untuk validasi perhitungan karbon kalkulator.</p>
+            </div>
+            
+            <div class="image-gallery">
+                <img src="lembarcakar1.jpg.jpeg" alt="Lembar Cakar 1">
+                <img src="lembarcakar2.jpg.jpeg" alt="Lembar Cakar 2">
+                <img src="lembarcakar3baru.jpeg" alt="Lembar Cakar 3 Baru">
+                <img src="lembarcakar4.jpg.jpeg" alt="Lembar Cakar 4">
+            </div>
+        </section>
+
+        <section id="validasi" class="validation-banner">
+            <h2>✅ Validasi Perhitungan</h2>
+            <p>
+                Melalui penjumlahan dari keempat kategori tersebut (x + y + z + g), 
+                didapatkan total emisi riil sebesar 2.184,78 kg CO2/tahun. 
+                Berdasarkan validasi hasil akhir kalkulator tercatat secara valid sebesar 2.184,78 kg CO2/tahun.
+            </p>
+        </section>
+      
+        <section id="kalkulator-emisi" class="card-kalkulator">
+            <h2>🌱 Kalkulator Emisi Karbon</h2>
+            <p class="deskripsi">Hitung perkiraan jejak karbon bulanan Anda untuk menjaga bumi ciptaan Tuhan tetap lestari.</p>
+            
+            <div class="input-group">
+                <label for="listrik">Penggunaan Listrik Bulanan (x) dalam Watt:</label>
+                <input type="number" id="listrik" placeholder="Contoh: 150" min="0">
+            </div>
+
+            <div class="input-group">
+                <label for="bbm">Konsumsi BBM Bulanan (y) dalam liter:</label>
+                <input type="number" id="bbm" placeholder="Contoh: 300" min="0">
+            </div>
+
+            <button type="button" onclick="hitungEmisi()">Hitung Total Emisi</button>
+
+            <div id="hasilBox" class="hasil-box">
+                <h3>Hasil Analisis Perhitungan:</h3>
+                
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sumber Aktivitas</th>
+                                <th>Variabel</th>
+                                <th>Rumus Emisi (kg CO₂)</th>
+                                <th>Hasil Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Listrik Bulanan</td>
+                                <td>x</td>
+                                <td>x × 0.85</td>
+                                <td id="subListrik">0 kg</td>
+                            </tr>
+                            <tr>
+                                <td>BBM Bulanan</td>
+                                <td>y</td>
+                                <td>y × 2.31</td>
+                                <td id="subBbm">0 kg</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td colspan="2">Total Emisi Bulanan (E)</td>
+                                <td>E = 0.85x + 2.31y</td>
+                                <td id="totalEmisi" class="total-nilai">0 kg CO₂</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="saran" id="saranEdukasi"></div>
+            </div>
+        </section>
+
+       
+
+    </div>
+
+    <script>
+        function hitungEmisi() {
+            const x = parseFloat(document.getElementById('listrik').value) || 0;
+            const y = document.getElementById('bbm') ? (parseFloat(document.getElementById('bbm').value) || 0) : 0;
+
+            const emisiListrik = x * 0.85;
+            const emisiBbm = y * 2.31;
+            
+            const total = emisiListrik + emisiBbm;
+
+            document.getElementById('subListrik').innerText = emisiListrik.toFixed(2) + " kg";
+            document.getElementById('subBbm').innerText = emisiBbm.toFixed(2) + " kg";
+            document.getElementById('totalEmisi').innerText = total.toFixed(2) + " kg CO₂";
+
+            const hasilBox = document.getElementById('hasilBox');
+            hasilBox.style.display = 'block';
+
+            let saranText = "";
+            if (total === 0) {
+                saranText = "Luar biasa! Tidak ada emisi yang tercatat. Mari terus pertahaman gaya hidup hemat energi ini.";
+            } else if (total < 100) {
+                saranText = "<strong>Cukup Baik!</strong> Jejak karbon Anda relatif rendah. Tetaplah bijak mematikan lampu dan membatasi berkendara jika tidak mendesak, sebagai wujud rasa syukur atas energi yang diberikan Tuhan.";
+            } else {
+                saranText = "<strong>Peringatan (Israf):</strong> Angka emisi Anda cukup tinggi. Ingatlah untuk tidak berlebih-lebihan dalam menggunakan nikmat energi. Cobalah mulai membiasakan berjalan kaki untuk jarak dekat dan menghemat listrik rumah demi menjaga kelestarian bumi ciptaan-Nya.";
+            }
+
+            document.getElementById('saranEdukasi').innerHTML = saranText;
+        }
+    </script>
+</body>
+</html>

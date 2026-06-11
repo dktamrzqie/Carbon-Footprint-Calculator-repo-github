@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>English Documentation – Carbon Footprint Calculator</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f0;
+      color: #1a2e1a;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 2.5rem 2rem 2rem;
+      background: linear-gradient(135deg, #2d6a4f, #52b788);
+      border-radius: 16px;
+      color: #ffffff;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 20px rgba(45, 106, 79, 0.3);
+    }
+
+    header p.subtitle {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      margin-top: 0.4rem;
+      letter-spacing: 0.5px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Section Cards ── */
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 1.8rem;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+      border-left: 5px solid #52b788;
+    }
+
+    .card h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #2d6a4f;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1b4332;
+      margin-bottom: 0.3rem;
+    }
+
+    .card p.tagline {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    /* ── Tables ── */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: 10px;
+      margin-top: 0.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    thead tr {
+      background-color: #2d6a4f;
+      color: #ffffff;
+    }
+
+    thead th {
+      padding: 0.75rem 1.1rem;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #e0ede6;
+      transition: background 0.15s ease;
+    }
+
+    tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background-color: #f0faf4;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f7fdf9;
+    }
+
+    tbody tr:nth-child(even):hover {
+      background-color: #e8f7ee;
+    }
+
+    tbody td {
+      padding: 0.7rem 1.1rem;
+      color: #2c3e2d;
+    }
+
+    ol {
+      padding-left: 1.4rem;
+      margin-top: 0.5rem;
+    }
+
+    ol li {
+      padding: 0.35rem 0;
+      font-size: 0.97rem;
+      color: #2c3e2d;
+    }
+
+    .text-block {
+      margin-top: 0.5rem;
+      font-size: 0.97rem;
+      color: #2c3e2d;
+    }
+
+    .text-block p {
+      margin-bottom: 0.9rem;
+    }
+
+    .text-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .script-block {
+      background: #f4fbf6;
+      border: 1px solid #b7e4c7;
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+      margin-top: 0.5rem;
+      font-size: 0.97rem;
+      color: #1b4332;
+      line-height: 1.85;
+    }
+
+    .script-block p {
+      margin-bottom: 0.6rem;
+    }
+
+    .script-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      color: #1b4332;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #d8ede1;
+      margin: 1.5rem 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6b8f71;
+      padding: 1.5rem 0 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 1.4rem 1.2rem;
+      }
+
+      thead th, tbody td {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>English Documentation</h1>
+      <p class="subtitle">Carbon Footprint Calculator</p>
+    </header>
+
+    <section class="card">
+      <h2>🌐 UI Localization</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Indonesian Term</th>
+              <th>English Translation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Beranda</td><td>Home</td></tr>
+            <tr><td>Masuk</td><td>Login</td></tr>
+            <tr><td>Daftar</td><td>Register</td></tr>
+            <tr><td>Nama Pengguna</td><td>Username</td></tr>
+            <tr><td>Kata Sandi</td><td>Password</td></tr>
+            <tr><td>Simpan</td><td>Save</td></tr>
+            <tr><td>Batal</td><td>Cancel</td></tr>
+            <tr><td>Cari</td><td>Search</td></tr>
+            <tr><td>Profil</td><td>Profile</td></tr>
+            <tr><td>Keluar</td><td>Logout</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>📖 User Instructions</h2>
+      <h3>Carbon Footprint Calculator Guide</h3>
+      <p class="tagline">Small Actions Can Make a Big diffeerence</p>
+      <ol>
+        <li>Open the Carbon Footprint Calculator Website</li>
+        <li>Select a menu on website.</li>
+        <li>Read the PAIBP learning materials available on the homepage.</li>
+        <li>Scroll down to view and read the dialogue about encouraging the community to preserve nature.</li>
+        <li>Select the "View Materials" menu or scroll down to explore other learning materials.</li>
+        <li>Click "Environmental Figure biography" to read the biography of Jeremy Owen.</li>
+        <li>Click "Carbon Footprint Worksheet and Validation" to view worksheet and calculation results.</li>
+        <li>Click "History of Environmental Movements" to learn about the development of the industrial Revolution from 1.0 to 4.0</li>
+        <li>Click "Graphs and Analysis Results" to view global temperature change graphs anf their analysis.</li>
+        <li>Click "Technical terms Dictionary" to view technical vocalabunary in English along with brief narrative descriptions.</li>
+        <li>Click "System Flowchart" to view the program Logic System Flowchart of the Carbon Footprint Calculator.</li>
+        <li>Select the Carbon Calculator menu or scroll down to calculate the environmrntal impact of daily activities.</li>
+        <li>Select the portfolio menu or scroll down to view evidence of collaboration among all subjects and project for developing a digital solution for environmenetal conservation.</li>
+        <li>Select the Healthy Lifestyle and Ergonomic OHS (Occupational Health and Safety) Tips menu or scroll down to view healthy lifestyle recommendations.</li>
+        <li>Click the link on the Healthy Lifestyle Tips page to watch videos about healthy living and the implementation of Occupational Health and Safety (OHS).</li>
+        <li>Select the Logbook &amp; Meeting Minutes menu or scroll down to view the role distribution logbook and group meeting minutes.</li>
+        <li>Select the Wireframe menu or scroll down to view the wireframe design of the Carbon Footprint Calculator.</li>
+        <li>Scroll down to view the footer containing an ethical message about environmental sustainability.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>🎤 Presentation Script</h2>
+      <div class="script-block">
+        <p>Good morning everyone.</p>
+        <p>Today, i would like to explain how our Carbon Footprint Calculator works.</p>
+        <p>First, the user enters personal activity data, such as transportation usage, electricity consumption, and waste production</p>
+        <p>Next, the system processes the information using emission factors stored in the database</p>
+        <p>Then, the calculator estimates the amount of carbon emissions produced by each activity and calculates the total carbon footprint</p>
+        <p>After that, the result is displayed on the screen for the user to review</p>
+        <p>Finally, the application provides recommendations to help users reduce their carbon emissions and adopt more environmentally friendly habits.</p>
+        <p>This tool helps raise environmental awareness and encourages sustainable living.</p>
+        <p>Thank you for your attention</p>
+      </div>
+    </section>
+
+    <!-- ── Technical Glossary ── -->
+    <section class="card">
+      <h2>📚 Technical Glossary</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Technical Term</th>
+              <th>Meaning in Indonesia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Algorithm</td><td>Algoritma</td></tr>
+            <tr><td>Carbon Footprint</td><td>Jejak Karbon</td></tr>
+            <tr><td>Greenhouse</td><td>Gas Rumah Kaca</td></tr>
+            <tr><td>API (Application Programming Interface)</td><td>Antarmuka Pemrograman Aplikasi (Penghubung antar software)</td></tr>
+            <tr><td>Data Input</td><td>Input Data (proses memasukkan data kedalam sistem)</td></tr>
+            <tr><td>Sustainability</td><td>Keberlanjutan</td></tr>
+            <tr><td>Database</td><td>Basis Data</td></tr>
+            <tr><td>Frontend</td><td>Sisi depan aplikasi yang berinteraksi langsung dengan pengguna</td></tr>
+            <tr><td>Backend</td><td>Sisi belakang aplikasi yang memproses logika dan data</td></tr>
+            <tr><td>Renewable Energy</td><td>Energi Terbarukan</td></tr>
+            <tr><td>Deployment</td><td>Penerapan/proses meluncurkan aplikasi ke server</td></tr>
+            <tr><td>Eco-friendly</td><td>Ramah lingkungan</td></tr>
+            <tr><td>User Interface (UI)</td><td>Tampilan visual aplikasi</td></tr>
+            <tr><td>Emission Factor</td><td>Faktor Emisi</td></tr>
+            <tr><td>Cloud computing</td><td>Komputasi Awan</td></tr>
+            <tr><td>Carbon Offset</td><td>Kompensasi Karbon</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      <p>Carbon Footprint Calculator &mdash; English Documentation</p>
+    </footer>
+
+  </div>
+</body>
+</html>

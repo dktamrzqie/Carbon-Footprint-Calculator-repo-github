@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Aktivitas Sehat & K3 Ergonomis</title>
+    
+    <style>
+        body {
+            background-image: url(background.jpg.jpeg);
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* --- Card Wadah Utama --- */
+        .tips-k3-modern-section {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 20px;
+            padding: 45px 35px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e0f2f1;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+        }
+
+        .section-title-modern {
+            margin-bottom: 35px;
+            border-bottom: 3px solid #2e7d32;
+            padding-bottom: 15px;
+        }
+
+        .section-title-modern h2 {
+            color: #1b5e20;
+            font-size: 1.8rem;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+
+        .section-subtitle-modern {
+            color: #666;
+            margin: 0;
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        /* --- Komponen Blok Konten --- */
+        .pjok-section-modern {
+            margin-bottom: 35px;
+        }
+
+        .category-title-modern {
+            color: #2e7d32;
+            font-size: 1.3rem;
+            margin: 35px 0 20px 0;
+            padding-left: 10px;
+            border-left: 4px solid #81c784;
+            font-weight: 600;
+        }
+
+        .tips-block {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        /* --- Grid & Card Aktivitas Fisik (DIJADIKAN SATU BARIS HORIZONTAL) --- */
+        .aktivitas-cards-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            overflow-x: auto; /* Aktifkan scroll kesamping jika layar sempit */
+            padding-bottom: 15px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Kustomisasi scrollbar agar estetik */
+        .aktivitas-cards-container::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .aktivitas-cards-container::-webkit-scrollbar-thumb {
+            background-color: rgba(46, 125, 50, 0.3);
+            border-radius: 10px;
+        }
+
+        .activity-card-modern {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e8f5e9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 0 0 calc(20% - 16px); /* Membagi 5 kartu sama rata dalam 1 baris */
+            min-width: 180px; /* Batas minimum lebar agar tidak gepeng di HP */
+            box-sizing: border-box;
+        }
+
+        .activity-card-modern:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.12);
+        }
+
+        .activity-icon-wrap {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 12px;
+            align-self: flex-start;
+        }
+
+        .walk-card { border-top: 4px solid #4caf50; }
+        .walk-card .activity-icon-wrap { background: #e8f5e9; }
+        .bike-card { border-top: 4px solid #2e7d32; }
+        .bike-card .activity-icon-wrap { background: #c8e6c9; }
+        .public-card { border-top: 4px solid #0288d1; }
+        .public-card .activity-icon-wrap { background: #e1f5fe; }
+        .car-card { border-top: 4px solid #e53935; }
+        .car-card .activity-icon-wrap { background: #ffebee; }
+        .motor-card { border-top: 4px solid #fb8c00; }
+        .motor-card .activity-icon-wrap { background: #fff3e0; }
+
+        .activity-card-modern h4 {
+            margin: 8px 0;
+            font-size: 1.11rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .activity-card-modern p {
+            margin: 0 0 15px 0;
+            font-size: 0.92rem;
+            color: #555;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .activity-card-modern h3 {
+            margin: 10px 0 0 0;
+            text-align: center;
+            font-size: 1.25rem;
+            color: #1b5e20;
+        }
+
+        /* --- Hubungan Kesehatan --- */
+        .health-relation-card-modern {
+            background: #f9fbf9;
+            border-radius: 14px;
+            padding: 25px;
+            border: 1px solid #e8f5e9;
+        }
+
+        .health-info-content p {
+            margin: 0 0 20px 0;
+            line-height: 1.7;
+            color: #444;
+            font-size: 0.98rem;
+        }
+
+        .progress-label-modern {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar-modern {
+            background: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 24px;
+            width: 100%;
+        }
+
+        .progress-fill-modern {
+            background: linear-gradient(90deg, #66bb6a, #43a047);
+            color: white;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            width: 90%;
+            border-radius: 20px;
+        }
+
+        /* --- Grid Layout Ergonomis --- */
+        .ergonomis-grid-modern {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            width: 100%;
+        }
+
+        .ergonomic-item-modern {
+            background: #ffffff;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border-top: 4px solid #43a047;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s ease;
+            text-align: center;
+        }
+
+        .ergonomic-item-modern:hover {
+            transform: translateY(-3px);
+        }
+
+        .check-icon {
+            color: #2e7d32;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .ergonomic-text {
+            font-weight: 600;
+            color: #333;
+            font-size: 1rem;
+        }
+
+        /* --- Komponen Timeline Rehat --- */
+        .timeline-modern {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .timeline-card-modern {
+            position: relative;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 25px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border: 1px solid #eee;
+            box-sizing: border-box;
+        }
+
+        .coding-phase { border-left: 5px solid #1565c0; }
+        .rest-phase { border-left: 5px solid #ff8f00; }
+        .link-yt { border-left: 5px solid #f234e4; grid-column: 1 / -1; }
+
+        .time-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .coding-phase .time-badge { color: #1565c0; background: #e3f2fd; }
+        .rest-phase .time-badge { color: #ff8f00; background: #fff8e1; }
+
+        .timeline-card-modern h4 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .timeline-card-modern p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .timeline-card-modern a {
+            color: #1565c0;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .timeline-card-modern a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Responsif Media --- */
+        @media (max-width: 800px) {
+            .tips-k3-modern-section {
+                padding: 25px 20px;
+            }
+            .time-badge {
+                position: static;
+                display: inline-block;
+                margin-bottom: 10px;
+            }
+            .link-yt {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section id="tips" class="tips-k3-modern-section">
+            
+            <div class="section-title-modern">
+                <h2>💡 Tips Aktivitas Sehat & K3 Ergonomis</h2>
+                <p class="section-subtitle-modern">Panduan kesehatan fisik dan kenyamanan kerja dalam menjaga produktivitas harian</p>
+            </div>
+
+            <div class="pjok-section-modern">
+                <h3 class="category-title-modern">🏃‍♂️ Analisis Dampak Aktivitas Fisik & Emisi</h3>
+                <div class="aktivitas-cards-container">
+                    
+                    <div class="activity-card-modern walk-card">
+                        <div class="activity-icon-wrap">🚶‍♂️</div>
+                        <h4>1. Berjalan Kaki</h4>
+                        <p>Aktivitas paling ramah lingkungan yang menghasilkan 0 emisi karbon. Berjalan kaki secara rutin terbukti efektif menjaga kesehatan jantung, membakar kalori, serta meningkatkan kebugaran metabolisme tubuh.</p>
+                        <h3><b><span>0 Kg CO₂</span></b></h3>
+                    </div>
+
+                    <div class="activity-card-modern bike-card">
+                        <div class="activity-icon-wrap">🚴‍♂️</div>
+                        <h4>2. Bersepeda</h4>
+                        <p>Opsi mobilitas aktif yang efisien dan bebas polusi. Bersepeda memperkuat otot kaki, meningkatkan kapasitas paru-paru, serta meminimalisir sumbangan jejak karbon harian secara drastis.</p>
+                        <h3><b><span>0 Kg CO₂</span></b></h3>
+                    </div>
+
+                    <div class="activity-card-modern public-card">
+                        <div class="activity-icon-wrap">🚌</div>
+                        <h4>3. Transportasi Umum</h4>
+                        <p>Menggunakan bus atau kereta mampu mereduksi emisi karbon per kapita dibandingkan kendaraan pribadi. Membantu mengurangi kemacetan jalan raya sekaligus menghemat konsumsi energi fosil masal.</p>
+                        <h3><b><span>0,08 Kg CO₂</span></b></h3>
+                    </div>
+
+                    <div class="activity-card-modern car-card">
+                        <div class="activity-icon-wrap">🚗</div>
+                        <h4>4. Mobil Pribadi</h4>
+                        <p>Menghasilkan emisi gas rumah kaca yang tinggi per kilometer perjalanan jika hanya diisi satu orang. Mempercepat laju pemanasan global dan meningkatkan kepadatan polusi udara di area perkotaan.</p>
+                        <h3><b><span>0,15 Kg CO₂</span></b></h3>
+                    </div>
+
+                    <div class="activity-card-modern motor-card">
+                        <div class="activity-icon-wrap">🏍️</div>
+                        <h4>5. Sepeda Motor</h4>
+                        <p>Meskipun konsumsi bahan bakarnya lebih hemat dibanding mobil, akumulasi jumlah sepeda motor yang besar tetap menyumbang polutan hidrokarbon dan karbon monoksida yang signifikan bagi atmosfer.</p>
+                        <h3><b><span>0,46 Kg CO₂</span></b></h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="pjok-section-modern">
+                <h3 class="category-title-modern">❤️ Hubungan Aktivitas Fisik Terhadap Kesehatan Tubuh</h3>
+                <div class="health-relation-card-modern">
+                    <div class="health-info-content">
+                        <p>Melakukan aktivitas fisik ringan hingga sedang secara konsisten, seperti beralih ke jalan kaki atau bersepeda, mampu memicu pelepasan hormon endorfin yang mengurangi stres. Secara klinis, kebiasaan ini menjaga tekanan darah tetap optimal, meningkatkan kesehatan jantung, serta mengurangi risiko penyakit pernapasan.</p>
+                    </div>
+                    <div class="progress-bar-container-modern">
+                        <div class="progress-label-modern">Indikator Kualitas Udara & Tubuh:</div>
+                        <div class="progress-bar-modern">
+                            <div class="progress-fill-modern">90% Udara Sehat</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pjok-section-modern">
+                <h3 class="category-title-modern">🪑 3. Penerapan K3 Ergonomis</h3>
+                <div class="ergonomis-grid-modern">
+                    <div class="ergonomic-item-modern">
+                        <span class="check-icon">✔️</span>
+                        <span class="ergonomic-text">Punggung Tegak</span>
+                    </div>
+                    <div class="ergonomic-item-modern">
+                        <span class="check-icon">✔️</span>
+                        <span class="ergonomic-text">Monitor 50-70 cm</span>
+                    </div>
+                    <div class="ergonomic-item-modern">
+                        <span class="check-icon">✔️</span>
+                        <span class="ergonomic-text">Siku Rileks</span>
+                    </div>
+                    <div class="ergonomic-item-modern">
+                        <span class="check-icon">✔️</span>
+                        <span class="ergonomic-text">Kaki Menapak Lantai</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pjok-section-modern">
+                <h3 class="category-title-modern">⏱️ 4. Manajemen Rehat Kerja</h3>
+                <div class="timeline-modern">
+                    <div class="timeline-card-modern coding-phase">
+                        <div class="time-badge">45 Menit</div>
+                        <h4>Fokus Coding</h4>
+                        <p>Bekerja dengan konsentrasi penuh pada layar pengetikan sistem.</p>
+                    </div>
+                    <div class="timeline-card-modern rest-phase">
+                        <div class="time-badge">15 Menit</div>
+                        <h4>Istirahat / Peregangan</h4>
+                        <p>Melakukan relaksasi mata dan peregangan otot skeletal tubuh.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pjok-section-modern">
+                <h3 class="category-title-modern">🔗 5. Link Video Kesehatan</h3>
+                <div class="timeline-modern">        
+                    <div class="timeline-card-modern link-yt">
+                        <h4>Link Video K3 & Edukasi Kesehatan</h4>
+                        <p><a href="https://youtu.be/bpQoWYjkewQ?si=E83DbzxiWDWwklgv" target="_blank">📺 Tonton Video Terkait K3</a></p>
+                        <p><a href="https://youtu.be/qZ0JFgQ00oc?si=Fi6hLyXI-hQUmHIS" target="_blank">📺 Tonton Video Edukasi Kesehatan</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+</body>
+</html>

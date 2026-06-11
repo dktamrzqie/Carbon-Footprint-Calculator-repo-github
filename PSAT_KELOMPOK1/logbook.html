@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logbook</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-color: #f4f7f5;
+            --container-bg: #ffffff;
+            --text-main: #2c3e35;
+            --text-muted: #52665d;
+            --accent-green: #3b7a57;
+            --accent-light: #e8f0ec;
+            --border-color: #d1ded7;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            --radius-lg: 16px;
+            --radius-md: 10px;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrapper {
+            max-width: 850px;
+            width: 100%;
+            background: var(--container-bg);
+            padding: 50px 60px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, 0.01);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-color), transparent);
+            margin: 45px 0;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 11pt;
+            text-align: justify;
+        }
+
+        h2 {
+            font-size: 16pt;
+            color: var(--accent-green);
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        h3 {
+            font-size: 13pt;
+            color: var(--text-main);
+            margin-top: 10px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 25px 0;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+        }
+
+        th {
+            background-color: var(--accent-light);
+            color: var(--accent-green);
+            font-weight: 600;
+            text-align: left;
+            padding: 16px 20px;
+            font-size: 10.5pt;
+            border-bottom: 1px solid var(--border-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 16px 20px;
+            border-bottom: 1px solid #eef3f0;
+            color: var(--text-muted);
+            font-size: 10.5pt;
+            vertical-align: top;
+            background-color: #ffffff;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #f9fbf9;
+        }
+
+        table:nth-of-type(1) th:nth-child(1), table:nth-of-type(1) td:nth-child(1) { width: 8%; text-align: center; }
+        table:nth-of-type(1) th:nth-child(2), table:nth-of-type(1) td:nth-child(2) { width: 27%; font-weight: 600; color: var(--text-main); }
+        table:nth-of-type(1) th:nth-child(3), table:nth-of-type(1) td:nth-child(3) { width: 65%; }
+
+        table:nth-of-type(2) td { width: 33.33%; }
+
+        a {
+            display: inline-block;
+            background-color: var(--accent-green);
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            font-size: 10.5pt;
+            margin-top: 15px;
+            box-shadow: 0 4px 14px rgba(59, 122, 87, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #2e5f43;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 122, 87, 0.3);
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px 10px;
+            }
+            .wrapper {
+                padding: 35px 25px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            th, td {
+                padding: 12px 15px;
+            }
+        }
+
+        dokum {
+            width: 50%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 style="text-align: center; color: var(--accent-green); margin-bottom: 40px;">📒 Logbook Proyek Carbon Footprint Calculator</h1>
+        <hr>
+        <section id="Pancasila">
+        <p>
+            Dalam pembuatan proyek Carboon Footprint Calculator, seluruh anggota
+             kelompok menerapkan nilai-nilai pancasila melalui musyawarah, 
+             gotong royong, tanggung jawab, dan kerja sama. Pembagian tugas
+             dilakukan secara adil sesuai kemampuan masing-masing anggota agar 
+             proyek dapat diselesaikan dengan baik dan tepat waktu.
+        </p>
+        <br>
+               <center><img src="dokum2.jpeg" style="width: 50%; border-radius: 12px;"></center>
+        <br>
+        <center><h3>🤝Logbook Pembagian Peran</h3></center>
+        <table border="1"cellpadding="10">
+            <tr>
+                <th>No</th>
+                <th>Nama Anggota</th>
+                <th>Pembagian Tugas</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Destya Inayah</td>
+                <td>
+                    Membuat coding HTML untuk materi PABP, Bahasa Indonesia, Sejarah, Pendidikan Pancasila, Bahasa Inggris, dan Bahasa Jawa.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Dikta Marzuqie N</td>
+                <td>
+                    Membuat coding HTML untuk materi DPK, IPAS, Informatika, Matematika, Seni Budaya, dan PJOK, serta JavaScript.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>M Fauzul Adhim</td>
+                <td>
+                    Membuat dan menyusun PowerPoint (PPT) presentasi proyek, serta mencari materi biografi tokoh Lingkungan Hidup.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Jovita Fuji J</td>
+                <td>
+                    Membuat flowchart, mencari materi yang diperlukan untuk website, dan membuat wireframe website.
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Santya Satya K</td>
+                <td>
+                    Membuat coding HTML, merancang desain CSS, dan membuat desain Background pada website.
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Kayla Marsya'atur R</td>
+                <td>
+                    Mencari dan mengumpulkan materi pendukung proyek.
+                </td>
+            </tr>
+        </table>
+
+           <center><h3>📌Kesimpulan</h3></center>
+        <p style="text-indent:40px; text-align: justify;">
+            Pembagian tugas dilakukan melalui musyawarah dengan mempertimbangkan kemampuan masing-masing anggota.
+            Destya dan Dikta bertanggung jawab pada pembuatan coding untuk mata pelajaran yang telah dibagi,sementara 
+            anggota lain mengerjakan bagian presentasi, flowchart, desain website, serta pencarian mater. Pembagian 
+            tugas ini dilakukan secara adil dan proporsinoal sehingga seluruh anggota dapat berkontribusi
+            dalam penyelesaian proyek web kalkulator karbon digital. 
+        </p>
+        <hr>
+        <center>
+            <h2>📝Notulen Rapat Kelompok</h2>
+        <a href="notulen.html" target="_blank">
+            📃Buka Notulen Rapat Kelompok
+        </a>
+        </center>
+        <hr>
+        <center><h3>📝Logbook Manajemen Konflik</h3></center>
+        <table border="1"cellpadding="10">
+            <tr>
+                <th>Permasalahan</th>
+                <th>Solusi</th>
+                <th>Hasil</th>
+            </tr>
+            <tr>
+                <td>
+                    Pembagian tugas belum merata pada awal pengerjaan proyek.
+                </td>
+                <td>
+                    Kelompok melakukan musyawarah untuk membagi tugas sesuai kemampuan masing-masing anggota.
+                </td>
+                <td>
+                    Setiap anggota memperoleh tugas yang jelas dan adil.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Perbedaan pendapat mengenai tampilan website.
+                </td>
+                <td>
+                    Dilakukan diskusi dan musyawarah hingga tercapai kesepakatan bersama.
+                </td>
+                <td>
+                    Desain website disetujui oleh seluruh anggota kelompok.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Kesulitan menggabungkan materi dari berbagai mata pelajaran.
+                </td>
+                <td>
+                    Anggota yang mencari materi berkoordinasi dengan anggota yang membuat website.
+                </td>
+                <td>
+                    Seluruh materi berhasil disusun dan ditampilkan pada website
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <section id="gotong-royong">
+            <center><h2>🤝Gotong Royong Sistematis</h2></center>
+            <p style="text-indent: 40px; text-align:justify;">
+                
+    Selama proses pembuatan web kalkulator karbon digital, salah satu anggota mengalami kendala pada
+     bagian kode program yang menyebabkan fitur perhitungan tidak dapat berjalan dengan baik.
+      Untuk mengatasi masalah tersebut, anggota lain membantu melakukan pengecekan kode (peer-debugging)
+       secara bersama-sama.
+       </p>
+    <p style="text-indent:40px; text-align:justify;">
+    Masing-masing anggota memberikan masukan sesuai bidangnya.
+    Programmer membantu menemukan letak kesalahan sintaks, tester 
+    mencoba berbagai kemungkinan penyebab error, sedangkan anggota lain
+     membantu mencari referensi solusi dari sumber belajar yang relevan. 
+     Setelah dilakukan diskusi dan perbaikan bersama, error berhasil diperbaiki 
+     dan fitur dapat berfungsi dengan baik.
+      </p>
+    <p style="text-indent:40px; text-align:justify;">
+    Kegiatan ini menunjukkan adanya gotong royong
+    yang sistematis karena setiap anggota berkontribusi 
+    sesuai perannya untuk mencapai tujuan bersama. Kerja sama tersebut membuat proses
+     penyelesaian masalah menjadi lebih cepat, efektif,
+    dan meningkatkan kekompakan tim.
+            </p>
+            <img src="kinan.jpeg" style="width: 30%; margin-left: 20px; border-radius: 12px;">
+            <img src="destia.jpeg" style="width: 30%; margin-left: 20px; border-radius: 12px;">
+            <img src="jovmar.jpeg" style="width: 30%; margin-left: 20px; border-radius: 12px;">
+            <img src="dkt.jpeg" style="width: 30%; margin-left: 20px; border-radius: 12px;">
+            <img src="adhm.jpeg" style="width: 30%; margin-left: 20px; border-radius: 12px;">
+            <img src="dokumm.jpeg" style="width: 30%; margin-left: 20px; border-radius: 12px;">
+        </section>
+        <hr>
+        <section id="tanggung-jawab">
+            <center><h2>🌍Tanggung Jawab Sosial</h2></center>
+            <p style="text-indent:40px; text-align:justify;">
+                
+    Penyediaan web kalkulator karbon digital merupakan bentuk tanggung jawab sosial
+    warga negara dalam menjaga dan melestarikan lingkungan hidup. Melalui alat ini, 
+    masyarakat dapat mengetahui perkiraan jejak karbon yang dihasilkan dari aktivitas 
+    sehari-hari sehingga lebih sadar akan dampaknya terhadap lingkungan.
+    </p>
+    <p style="text-indent:40px; text-align:justify;">
+    Selain sebagai hak untuk memperoleh informasi mengenai lingkungan yang sehat,
+     penggunaan kalkulator karbon juga mendukung kewajiban warga negara untuk 
+     berpartisipasi dalam upaya mengurangi pencemaran dan kerusakan lingkungan. 
+     Dengan mengetahui jumlah emisi yang dihasilkan, masyarakat dapat mengambil 
+     langkah-langkah yang lebih ramah lingkungan, seperti menghemat energi,
+      mengurangi penggunaan kendaraan bermotor, dan mengelola sampah dengan baik.
+    </p>
+    <p style="text-indent:40px; text-align:justify;">
+    Oleh karena itu, pengembangan kalkulator karbon digital tidak
+     hanya bermanfaat sebagai sarana edukasi, tetapi juga menjadi 
+     wujud kepedulian dan tanggung jawab sosial dalam mendukung pelestarian
+      lingkungan demi keberlanjutan
+    kehidupan generasi sekarang dan yang akan datang.
+            </p>
+            <hr>
+            <section id="refleksi-digital">
+                <center><h2>💻Refleksi Warga Negara Digital</h2></center>
+                <p style="text-indent:40px; text-align:justify;">
+    
+    Melalui proyek pembuatan web kalkulator karbon digital, saya belajar 
+    bahwa teknologi dapat digunakan untuk memberikan manfaat bagi masyarakat dan lingkungan.
+     Sebagai warga negara digital, saya tidak hanya dituntut untuk mampu menggunakan teknologi, 
+     tetapi juga bertanggung jawab dalam menciptakan solusi yang bermanfaat bagi banyak orang.
+    </p>
+      <p style="text-indent:40px; text-align:justify;">
+    Dalam proses pengerjaan proyek, saya belajar bekerja sama dengan anggota 
+    kelompok, menghargai pendapat orang lain, serta menyelesaikan tugas sesuai
+     tanggung jawab yang diberikan. Saya juga memahami pentingnya menggunakan informasi
+      dan teknologi secara bijak, kreatif, dan bertanggung jawab.
+    </p>
+    <p style="text-indent:40px; text-align:justify;">
+    Pengalaman ini membuat saya lebih sadar bahwa setiap individu
+     memiliki peran dalam menjaga lingkungan. Dengan memanfaatkan teknologi digital,
+      kita dapat membantu meningkatkan kesadaran masyarakat mengenai emisi
+       karbon dan pentingnya menjaga kelestarian lingkungan. Oleh karena itu, 
+       saya akan terus berusaha menjadi warga negara digital yang aktif, bertanggung
+        jawab, dan mampu memberikan
+    kontribusi positif bagi masyarakat serta lingkungan sekitar.
+                </p>
+            </section>
+        </section>
+        </section>
+</body>
+</html>
